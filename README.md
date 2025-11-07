@@ -35,7 +35,7 @@ Easily manage your daily tasks with Google authentication, real-time updates, an
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/Sohaib0088task-manager-dashboard.git
+git clone https://github.com/Sohaib0088/task-manager-dashboard.git
 cd task-manager-dashboard
 ```
 
