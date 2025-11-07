@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 Task Manager Dashboard
 
-## Getting Started
+A modern full-stack **Task Management App** built with **Next.js 14 (App Router)**, **NextAuth.js**, and **Redis**.
+Easily manage your daily tasks with Google authentication, real-time updates, and a clean dashboard UI.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+✅ **Authentication with Google** — Secure login using NextAuth.js
+📝 **Task Management** — Add, edit, delete, and mark tasks as complete
+📊 **User Dashboard** — Personalized dashboard per user
+💾 **Redis Storage** — Ultra-fast in-memory database for tasks
+🎨 **Modern UI** — Built with TailwindCSS for clean, responsive design
+⚡ **Serverless API Routes** — Efficient backend logic using Next.js route handlers
+🔔 **Toasts & Notifications** — Interactive feedback on every action
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology                    |
+| ------------ | ----------------------------- |
+| **Frontend** | React (Next.js 14 App Router) |
+| **Styling**  | TailwindCSS                   |
+| **Auth**     | NextAuth.js (Google Provider) |
+| **Database** | Redis (via ioredis)           |
+| **Hosting**  | Vercel (Recommended)          |
+| **Language** | JavaScript (ESNext)           |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/task-manager-dashboard.git
+cd task-manager-dashboard
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Set up environment variables
+
+Create a `.env.local` file in the root directory and add:
+
+```bash
+NEXTAUTH_SECRET=your-secret-key
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+REDIS_HOST=localhost
+REDIS_PORT=6379
+```
+
+> 💡 You can generate `NEXTAUTH_SECRET` using:
+>
+> ```bash
+> npx auth secret
+> ```
+
+### 4️⃣ Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your app will be live at:
+👉 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Project Structure
 
-## Learn More
+```
+task-manager-dashboard/
+│
+├── app/
+│   ├── api/
+│   │   └── tasks/route.js       # API routes for CRUD operations
+│   ├── dashboard/page.jsx       # Main dashboard UI
+│   ├── layout.jsx               # Layout wrapper with SessionProvider
+│   └── page.jsx                 # Landing/login page
+│
+├── lib/
+│   └── redis.js                 # Redis connection setup
+│
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧱 Core Concepts Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Next.js App Router** for file-based routing and server actions
+* **Middleware** for protecting authenticated routes
+* **Controllers** to separate business logic from route handlers
+* **Redis** for quick and scalable data storage
+* **NextAuth** for OAuth2-based login
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💬 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to fork this repo, open issues, or submit pull requests!
+Contributions and suggestions are welcome.
+
+---
+
+## 🧑‍💻 Author
+
+**Sohaib**
+💼 Developer | 🌐 Full-Stack Enthusiast
+📧 [sohaib021222@gmail.com](mailto:sohaib021222@gmail.com)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — feel free to use and modify.
